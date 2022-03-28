@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="UTF-8">
+<html>
+    <noscript>
+        <p>Javascript est désactivé. Si vous avez la possibilité de l'activer, faites-le, vous y gagnerez en confort d'utilisation du site.</p>
+    </noscript>
+    <head>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <!-- CSS pour l'image de fond -->
+        <style>
+            body {
+                background-image:url('./img/fond.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+        </style>
+
+        <script>
+
+        </script>
+    
+    </head>
+    <body>
+        <center>
+            <br><a href="http://lakartxela.iutbayonne.univ-pau.fr/~gpeyrelongue/WEBSERVICE/" style="color: black"><h1>Webservices de notre API</h1></a><br>
+            
+            <!-- Affichage de la petite bulle d'information qui présente le projet -->
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-md-2">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="alert alert-dismissible alert-primary">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <p class="card-text">Cette API permet de comparer différentes villes de France (à partir du code postal que vous fournissez), selon plusieurs critères :
+                                <ul>
+                                    <li>La température de la ville</li>
+                                    <li>L'indice de qualité de l'air</li>
+                                    <li>Le prix moyen des différents carburant disponibles</li>
+                                </ul>
+                                Notre API renvoi donc les valeurs des différents critères des villes et calcule un score en fonction de celles-ci.
+                                <br>Le webservice quant à lui, permet soit d'afficher le JSON brut de notre API; ou bien de traiter le JSON afin d'afficher un graphique, plus compréhensible.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+              
+            <!-- Affichage du formulaire de saisie du nombre de villes -->
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-md-4">
+                    </div>
+
+                    <div class="col-md-4" id="formulaires">
+
+                            <form name="formulaireNbVilles" action="formulaireCodePostaux.php" method="POST">
+
+                                <label class="form-label"><b>Combien de villes désirez-vous comparer ?</b></label><br>
+                                <input pattern="[1-5]{1}" type="number" id="nbVilles" name="nbVilles" class="form-control" min="1" max="5"><br><br>
+                
+                                <button class="btn btn-primary">Afficher les champs</button>
+
+                            </form>
+                            <br><br>
+                    </div>
+
+                    <div class="col-md-4">
+                    </div>
+
+                </div>
+            </div>
+                
+        </center>
+    </body>
+</html>
